@@ -61,6 +61,10 @@
     border-radius: 15px;
 }
 
+.market-cap {
+    text-align: right;
+}
+
 .table-layout {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
@@ -91,4 +95,25 @@
 .table-layout .red {
     color: red;
     text-align: center;
+}
+
+@media (max-width: 750px) {
+    .table-layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+    .market-cap {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .table-layout {
+        font-size: 12px;
+    }
+    .table-layout div img {
+        width: 25px;
+    }
+    .hero form input {
+        width: 100px;
+    }
 }
