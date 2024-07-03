@@ -1,0 +1,55 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    color: #ddd;
+    border-bottom: 2px solid #3c3c3c; 
+    font-size: large;
+}
+
+.navbar .logo{
+    width: max(12vw, 150px);
+    border-radius: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+.nav-right{
+    display: flex;
+    align-self: center;
+    gap: max(1vw, 12px);
+}
+
+.navbar select{
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+}
+
+.navbar option{
+    background-color: #014f86;
+    color: white;
+}
+
+.navbar button{
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #013a63;
+    color: #C9AD8B;
+    cursor: pointer;
+    font-size: large;
+    margin: 0 20px;
+}
