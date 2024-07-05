@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
@@ -10,7 +11,7 @@ const Navbar = () => {
     const handleCurrencyChange = (e) => {
         switch(e.target.value) {
             case "cad":
-                setCurrency({name: "cad", symbol: "CAD $"});
+                setCurrency({name: "cad", symbol: "$"});
                 break;
             case "usd":
                 setCurrency({name: "usd", symbol: "$"});
@@ -22,15 +23,17 @@ const Navbar = () => {
                 setCurrency({name: "inr", symbol: "₹"});
                 break;
             default:
-                setCurrency({name: "cad", symbol: "CAD $"});
+                setCurrency({name: "cad", symbol: "$"});
         };
     }
 
     return (
         <div className="navbar">
-            <img src={logo} alt="logo" className="logo"/>
+            <Link to="/">
+                <img src={logo} alt="logo" className="logo"/>
+            </Link>
             <ul>
-                <li>Home</li>
+                <Link to="/">Home</Link>
                 <li>Feature</li>
                 <li>Pricing</li>
                 <li>Blog</li>
@@ -42,7 +45,6 @@ const Navbar = () => {
                     <option value="eur">EUR</option>
                     <option value="inr">INR</option>
                 </select>
-                <button>Sign up</button>
             </div>
         </div>
     );
