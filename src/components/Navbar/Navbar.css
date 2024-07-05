@@ -30,19 +30,6 @@
 }
 
 .navbar select{
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-}
-
-.navbar option{
-    background-color: #014f86;
-    color: white;
-}
-
-.navbar button{
     padding: 10px 40px;
     border-radius: 10px;
     border: none;
@@ -51,6 +38,17 @@
     cursor: pointer;
     font-size: large;
     margin: 0 20px;
+}
+
+.navbar option{
+    background-color: #014f86;
+    color: white;
+    font-size: smaller;
+}
+
+.navbar option:focus {
+    background-color: #013a63;
+    color: #C9AD8B;
 }
 
 @media (max-width: 900px) {
