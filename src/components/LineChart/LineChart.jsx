@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Chart from 'react-google-charts';
+import Loader from '../Loader/Loader';
 
 function LineChart({historicalData}) {
     const [data, setData] = useState([["Date", "Price"]]);
@@ -18,7 +19,7 @@ function LineChart({historicalData}) {
         <Chart 
             width="100%"
             chartType="LineChart"
-            loader={<div>Loading Chart</div>}
+            loader={<div className='loader'><Loader /></div>}
             data={data}
             options={{
                 hAxis: {

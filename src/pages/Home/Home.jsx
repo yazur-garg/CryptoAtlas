@@ -28,7 +28,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setCoinsDisplayed(allCoins.slice(0, 10));
-    }, 500);
+    }, 300);
   }, [allCoins]);
 
   const handleSearchInput = (event) => {

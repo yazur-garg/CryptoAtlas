@@ -38,9 +38,7 @@ const Coin = () => {
     };
 
     useEffect(() => {
-        setTimeout(() => {
             fetchCoinData();
-        }, 500);
     }, []);
 
     useEffect(() => {
