@@ -6,13 +6,13 @@ const CoinContextProvider = ( props ) => {
     const [allCoins, setAllCoins] = useState([]);
     const [currency, setCurrency] = useState({
         name: "cad",
-        symbol: "CAD $"
+        symbol: "$"
     });
 
     const fetchAllCoins = async () => {
         const options = {
             method: 'GET',
-            headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-62ZuYUNcaFP7pg9T3JtYFSnd'}
+            headers: {accept: 'application/json', 'x-cg-demo-api-key': import.meta.env.VITE_API_KEY}
           };
           
           fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
